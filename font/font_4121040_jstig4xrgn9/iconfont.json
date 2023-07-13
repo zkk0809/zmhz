@@ -1,0 +1,23 @@
+{
+  "id": "4121040",
+  "name": "hangzhou",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2200608",
+      "name": "杭州西湖",
+      "font_class": "hangzhouxihu",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "21150976",
+      "name": "杭州西湖2",
+      "font_class": "hangzhouxihu2",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    }
+  ]
+}

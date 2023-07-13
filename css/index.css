@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: feilong;
+    src: url(../font/HeFengShuDaoZhaoHeFeiLongTi-Shan\(GEETYPE-FeilongGBT-Flash\)-2.ttf);
+}
+html,body{
+    height: 100%;
+}
+#header{
+    position: relative;
+}
+#header #logo{
+    height: 80px;
+    border: 1px solid;
+    font-family: feilong;
+    font-size: 80px;
+    text-indent: 70px;
+    text-shadow: 5px 5px 5px rgb(29, 108, 161);
+    background-image: url(../imgs/hangzhou.jpg);
+}
+#header #logo i{
+    font-size: 80px;
+}
+#header>i{
+    font-size: 80px;
+    color: #ac3333;
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+#header .info{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    position: absolute;
+    top: 10px;
+    right: 200px;
+}
+#header .info p{
+    margin-bottom: 10px;
+    text-align: center;
+}
+#header .info p span{
+    color: blue;
+    font-size: 20px;
+    text-decoration: underline;
+}
+#header .info button{
+    width: 80px;
+    border-radius: 5px;
+    align-self: center;
+    cursor: pointer;
+}
+#header .footer{
+    height: 40px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    background-color: #0c345c;
+}
+#header .footer ul{
+    list-style: none;
+    width: 70%;
+    /* background-color: yellow; */
+    display: flex;
+    
+}
+#header .footer ul li{
+    /* width: 150px; */
+    line-height: 40px;
+    /* text-align: center; */
+    color: white;
+    /* cursor: pointer; */
+    transition: all 0.1s;
+    margin-right: 60px;
+}
+#header .footer ul li a{
+    color: white;
+    text-decoration: none;
+}
+#header .footer ul li a:hover{
+    color: red;
+    /* font-size: 20px; */
+}
+.section{
+    margin: 0 auto;
+    width:70% ;
+    height: 70%;
+    border: 1px solid;
+    position: relative;
+    margin-bottom: 20px;
+}
+/* .box {
+    width: 600px;
+    height: 300px;
+    position: relative;
+} */
+
+.section ol,
+ul,
+li {
+    list-style: none;
+}
+
+.section ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.section ul li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s linear;
+}
+
+.section ul li.active {
+    opacity: 1;
+}
+
+.section ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.section ol {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 120px;
+    height: 30px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section ol li {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.section ol li.active {
+    background-color: orange;
+}
+
+.section .left,
+.right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    cursor: pointer;
+}
+
+.section .left {
+    left: 0;
+}
+
+.section .right {
+    right: 0;
+}
+.list{
+    /* margin-top: 20px; */
+    width: 70%;
+    height: 30%;
+    /* margin-top: 51px;
+    margin-bottom: 35px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.list .item{
+    cursor: pointer;
+    height: 90%;
+    width: 30%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s;
+}
+.list .item.active{
+    transform: scale(1.1);
+}
+.list img{
+    height: 75%;
+    display: block;
+}
+.list p{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}

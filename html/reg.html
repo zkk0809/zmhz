@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最美杭州-注册</title>
+    <link rel="stylesheet" href="../css/reg.css">
+    <link rel="stylesheet" href="../font/font_4121040_jstig4xrgn9/iconfont.css">
+    <script src="../js/jQuery.js"></script>
+    <script src="../js/reg.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">最美杭州<i class="iconfont icon-hangzhouxihu2"></i></div>
+        <i class="iconfont icon-hangzhouxihu"></i>
+        <input type="submit" value="清除注册" id="clearbutton">
+    </div>
+    <div class="section">
+        <div class="sec1">
+            <p id="sign">用户注册</p>
+            <a href="login.html">已有帐号？去登录</a>
+        </div>
+        <form>
+            <div>
+                <label for="username">用户名：</label>
+                <input type="text" id="username" name="username" required><br>
+            </div>
+
+            <div>
+                <label for="password">密　码：</label>
+                <input type="password" id="password" name="password" required><br>
+            </div>
+
+            <div>
+                <label for="email">邮　箱：</label>
+                <input type="email" id="email" name="email" required><br>
+            </div>
+
+            <div>
+                <label for="gender">性　别：</label>
+                <span>
+                    <input type="radio" id="male" name="gender" value="男" checked>
+                <label for="male">男</label>
+                <input type="radio" id="female" name="gender" value="女">
+                <label for="female">女</label><br>
+                </span>
+                
+            </div>
+
+            <div>
+                <label for="age">年　龄：</label>
+                <input type="number" id="age" name="age" min="1" max="120" required><br>
+            </div>
+
+            
+            <input type="submit" value="注册" id="mybutton">
+        </form>
+    </div>
+    <h2>用户信息：</h2>
+</body>
+
+</html>

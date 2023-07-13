@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: feilong;
+    src: url(../font/HeFengShuDaoZhaoHeFeiLongTi-Shan\(GEETYPE-FeilongGBT-Flash\)-2.ttf);
+}
+html,body{
+    height: 100%;
+}
+/* body{
+    background-color: rgb(254 227 197);
+} */
+#header{
+    position: relative;
+}
+#header #logo{
+    height: 80px;
+    border: 1px solid;
+    font-family: feilong;
+    font-size: 80px;
+    text-indent: 70px;
+    text-shadow: 5px 5px 5px rgb(29, 108, 161);
+    background-image: url(../imgs/hangzhou.jpg);
+}
+#header #logo i{
+    font-size: 80px;
+}
+#header>i{
+    font-size: 80px;
+    color: #ac3333;
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+#section{
+    width: 500px;
+    height: 400px;
+    border: 1px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -200px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+#section p:first-child{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#section form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: auto; */
+}
+#section form input{
+    width: 400px;
+    border: none;
+    height: 40px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 50px;
+}
+#section form button{
+    width: 400px;
+    height: 40px;
+    font-size: 20px;
+}
+#section a{
+    width: 400px;
+    margin-top: 20px;
+    text-align: right;
+    color: blue;
+    text-decoration: none;
+}
+
+
+
