@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>最美杭州-登录</title>
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../font/font_4121040_jstig4xrgn9/iconfont.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script>
+        axios.interceptors.request.use(function (config) {
+            // Do something before request is sent
+            // console.log('请求前')
+            // const token =localStorage.getItem('token')
+            // config.headers.Authorization=`Bearer ${token}`
+            return config;
+        }, function (error) {
+            // Do something with request error
+            return Promise.reject(error);
+        });
+
+        // Add a response interceptor
+        axios.interceptors.response.use(function (response) {
+            // Any status code that lie within the range of 2xx cause this function to trigger
+            // Do something with response data
+            // console.log('请求后')
+            // console.log(response.data.Authorization)
+            // const {authorization}=response.headers
+            // console.log(authorization)
+            response.data.Authorization&&localStorage.setItem('token',response.data.Authorization)
+            // localStorage.setItem('zk',11111)
+            return response;
+        }, function (error) {
+            // Any status codes that falls outside the range of 2xx cause this function to trigger
+            // Do something with response error
+            return Promise.reject(error);
+        });
+    </script>
     <script src="../js/jQuery.js"></script>
     <script src="../js/login.js"></script>
 </head>

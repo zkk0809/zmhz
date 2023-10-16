@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/reg.css">
     <link rel="stylesheet" href="../font/font_4121040_jstig4xrgn9/iconfont.css">
     <script src="../js/jQuery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="../js/reg.js"></script>
 </head>
 
@@ -15,7 +16,7 @@
     <div id="header">
         <div id="logo">最美杭州<i class="iconfont icon-hangzhouxihu2"></i></div>
         <i class="iconfont icon-hangzhouxihu"></i>
-        <input type="submit" value="清除注册" id="clearbutton">
+        <!-- <input type="submit" value="清除注册" id="clearbutton"> -->
     </div>
     <div class="section">
         <div class="sec1">
@@ -39,14 +40,14 @@
             </div>
 
             <div>
-                <label for="gender">性　别：</label>
+                <label for="gender" id="gender">性　别：</label>
                 <span>
-                    <input type="radio" id="male" name="gender" value="男" checked>
-                <label for="male">男</label>
-                <input type="radio" id="female" name="gender" value="女">
-                <label for="female">女</label><br>
+                    <input type="radio" id="male" name="gender"  checked>
+                    <label for="male">男</label>
+                    <input type="radio" id="female" name="gender" >
+                    <label for="female">女</label><br>
                 </span>
-                
+
             </div>
 
             <div>
@@ -54,11 +55,11 @@
                 <input type="number" id="age" name="age" min="1" max="120" required><br>
             </div>
 
-            
+
             <input type="submit" value="注册" id="mybutton">
         </form>
     </div>
-    <h2>用户信息：</h2>
+    <!-- <h2>用户信息：</h2> -->
 </body>
 
 </html>

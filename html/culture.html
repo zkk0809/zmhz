@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="../css/culture.css">
     <link rel="stylesheet" href="../font/font_4121040_jstig4xrgn9/iconfont.css">
     <link rel="stylesheet" href="../css/animate3.5.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script>
+        axios.interceptors.request.use(function (config) {
+            // Do something before request is sent
+            return config;
+        }, function (error) {
+            // Do something with request error
+            return Promise.reject(error);
+        });
+
+        // Add a response interceptor
+        axios.interceptors.response.use(function (response) {
+            // Any status code that lie within the range of 2xx cause this function to trigger
+            // Do something with response data
+            response.data.newtoken&&localStorage.setItem('token',response.data.newtoken)
+            return response;
+        }, function (error) {
+            // Any status codes that falls outside the range of 2xx cause this function to trigger
+            // Do something with response error
+            return Promise.reject(error);
+        });
+    </script>
     <script src="../js/jQuery.js"></script>
     <script src="../js/culture.js"></script>
 </head>

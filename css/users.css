@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: feilong;
+    src: url(../font/HeFengShuDaoZhaoHeFeiLongTi-Shan\(GEETYPE-FeilongGBT-Flash\)-2.ttf);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#header {
+    position: relative;
+}
+
+#header #logo {
+    height: 80px;
+    border: 1px solid;
+    font-family: feilong;
+    font-size: 80px;
+    text-indent: 70px;
+    text-shadow: 5px 5px 5px rgb(29, 108, 161);
+    background-image: url(../imgs/hangzhou.jpg);
+}
+
+#header #logo i {
+    font-size: 80px;
+}
+
+#header>i {
+    font-size: 80px;
+    color: #ac3333;
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+
+#header .info {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    position: absolute;
+    top: 10px;
+    right: 200px;
+}
+
+#header .info p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#header .info p span {
+    color: blue;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+#header .info button {
+    width: 80px;
+    border-radius: 5px;
+    align-self: center;
+    cursor: pointer;
+}
+
+#header .footer {
+    height: 40px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    background-color: #0c345c;
+}
+
+#header .footer ul {
+    list-style: none;
+    width: 70%;
+    /* background-color: yellow; */
+    display: flex;
+
+}
+
+#header .footer ul li {
+    /* width: 150px; */
+    line-height: 40px;
+    /* text-align: center; */
+    color: white;
+    /* cursor: pointer; */
+    transition: all 0.1s;
+    margin-right: 60px;
+}
+
+#header .footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#header .footer ul li a:hover {
+    color: red;
+    /* font-size: 20px; */
+}
+
+#section {
+    width: 70%;
+    /* height: 1468px; */
+    height: auto;
+    /* border: 1px solid; */
+    margin: 0 auto;
+    /* display: flex; */
+    position: relative;
+    margin-top: 50px;
+}
+
+#section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+#section table tr th,
+#section table tr td {
+    border: 1px solid black;
+    height: 40px;
+}
+
+#section table tr td {
+    text-align: center;
+}
+
+#section>div {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#section #tanchu #back{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+
+}
+
+#section form div {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#section form div>label {
+    width: 30%;
+    font-size: 20px;
+    text-align: center;
+}
+
+#section form div>input {
+    flex: 1;
+    height: 30px;
+}
+
+#section form div:nth-child(5) input {
+    flex: none;
+    width: 20%;
+}
+
+#section form>input {
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

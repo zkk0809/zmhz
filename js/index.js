@@ -1,30 +1,52 @@
-var searchParams = new URLSearchParams(location.search)
-var username = searchParams.get('username')
+// var searchParams = new URLSearchParams(location.search)
+// var username = searchParams.get('username')
+var token = localStorage.getItem('token')
+// console.log(token)
+$(document).ready(async function () {
+    //登录鉴权
+    const res = await axios.post('http://localhost:3000/jwt', {
+        token
+    })
+    if (res.data.ok === 1) {
+        $(`<p> <span>${res.data.username}</span> 欢迎你</p>`).appendTo($('.info'))
+        $(`<div>
+        <button id="logout">注销</button>
+        <button id="gaunli">用户管理</button>
+    </div>`).appendTo($('.info'))
 
-$(document).ready(function () {
-
+    } else {
+        $(`<p>  欢迎你</p>`).appendTo($('.info'))
+        $(`<button id="logout">去登录</button>`).appendTo($('.info'))
+    }
     //渲染页面
-    if (username !== null) {
+    /* if (username !== null) {
         $(`<p> <span>${username}</span> 欢迎你</p>`).appendTo($('.info'))
-        $(`<button id="logout">注销</button>`).appendTo($('.info'))
+        $(`<div>
+        <button id="logout">注销</button>
+        <button id="gaunli">用户管理</button>
+    </div>`).appendTo($('.info'))
     }
     else{
         $(`<p>  欢迎你</p>`).appendTo($('.info'))
         $(`<button id="logout">去登录</button>`).appendTo($('.info'))
-    }
+    } */
 
     //注销
     $("#logout").click(function () {
+        localStorage.removeItem('token')
         location.href = 'login.html'
     })
+    $("#gaunli").click(function () {
+        location.href = 'users.html'
+    })
     //轮播
-    function lunbo(){
-        var box=document.querySelector(".section")
+    function lunbo() {
+        var box = document.querySelector(".section")
 
         var img = box.querySelectorAll("ul>li")
         var point = box.querySelectorAll("ol>li")
-        var left=box.querySelector(".left")
-        var right=box.querySelector(".right")
+        var left = box.querySelector(".left")
+        var right = box.querySelector(".right")
         // 定义函数
         var index = 0
         function changeone(type) {
@@ -51,56 +73,56 @@ $(document).ready(function () {
             point[index].className = "active"
         }
         // 事件委托
-        box.onclick=function(e){
+        box.onclick = function (e) {
             console.log(e.target)
-            if(e.target.className==="left"){
+            if (e.target.className === "left") {
                 changeone(false)
             }
-            if(e.target.className==="right"){
+            if (e.target.className === "right") {
                 changeone(true)
             }
             // 利用dataset获取属性值*****
-            if(e.target.dataset.name==="point"){
+            if (e.target.dataset.name === "point") {
                 // var i=e.target.dataset.i-0
                 changeone(e.target.dataset.i)
             }
         }
-        setInterval(function(){
+        setInterval(function () {
             changeone(true)
-        },3000)
+        }, 3000)
     }
     lunbo()
 
     //导航栏点击跳转
-    $('#index').click(function(){
-        location.href=`index.html?username=${username}`
+    $('#index').click(function () {
+        location.href = `index.html`
     })
-    $('#culture').click(function(){
-        location.href=`culture.html?username=${username}`
+    $('#culture').click(function () {
+        location.href = `culture.html`
     })
-    $('#travel').click(function(){
-        location.href=`travel.html?username=${username}`
+    $('#travel').click(function () {
+        location.href = `travel.html`
     })
 
     //容器点击跳转
-    $(".list").on('click','.item',function(){
+    $(".list").on('click', '.item', function () {
         // console.log($(this).index())
-        if($(this).index()===0){
-            location.href='https://baike.baidu.com/item/%E6%9D%AD%E5%B7%9E%E5%B8%82/200167'
+        if ($(this).index() === 0) {
+            location.href = 'https://baike.baidu.com/item/%E6%9D%AD%E5%B7%9E%E5%B8%82/200167'
         }
-        else if($(this).index()===1){
-            location.href=`culture.html?username=${username}`
+        else if ($(this).index() === 1) {
+            location.href = `culture.html`
         }
-        else{
-            location.href=`travel.html?username=${username}`
+        else {
+            location.href = `travel.html`
         }
     })
 
     //容器hover变大
-    $(".item").on('mouseover',function(){
+    $(".item").on('mouseover', function () {
         $(this).addClass('active')
     })
-    $(".item").on('mouseout',function(){
+    $(".item").on('mouseout', function () {
         $(this).removeClass('active')
     })
 })
