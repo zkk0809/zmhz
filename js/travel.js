@@ -18,7 +18,7 @@ $(document).ready(async function () {
         $(`<p>  欢迎你</p>`).appendTo($('.info'))
         $(`<button id="logout">去登录</button>`).appendTo($('.info'))
     }
-
+// 111
     //渲染页面
     /* if (username !== null) {
         $(`<p> <span>${username}</span> 欢迎你</p>`).appendTo($('.info'))
